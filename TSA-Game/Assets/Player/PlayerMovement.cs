@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour 
 {
+	public float SetSpeed;
+
 	public float Speed;
+	public float RunSpeed;
     public GameObject shot;
 	public Transform GunEnd;
 	public float BulletSpeed;
@@ -12,11 +15,14 @@ public class PlayerMovement : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		SetSpeed = Speed;
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 	// Update is called once per frame
 	void Update () 
 	{
+	    
+
 		float MoveFB = Input.GetAxis ("Vertical") * Speed;
 		float MoveLR = Input.GetAxis ("Horizontal") * Speed;
 		MoveFB *= Time.deltaTime;
@@ -35,5 +41,16 @@ public class PlayerMovement : MonoBehaviour
             newShot.GetComponent<Rigidbody>().velocity = GunEnd.transform.forward * BulletSpeed;
  
         }
+
+		if (Input.GetKey (KeyCode.LeftShift)) 
+		{
+			Speed = RunSpeed;
+		} 
+
+		else 
+		{
+			Speed = SetSpeed;
+		}
+
 	}
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour 
 {
+	public int jumps;
 	CharacterController Player;
 	public float jumpPower;
 	private Vector3 jump = Vector3.zero;
@@ -17,13 +18,21 @@ public class Jump : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		
 		if (Player.isGrounded) 
 		{
-			if (Input.GetButtonDown ("Jump")) 
-			{
-				jump.y = jumpPower;
-			}
+			jumps = 3;
+		
 		}
+			if (jumps > 0) 
+			{
+				if (Input.GetButtonDown ("Jump")) 
+				{
+					jumps--;
+					jump.y = jumpPower;
+				}
+			}
+
 
 		jump.y -= Gravity * Time.deltaTime;
 		Player.Move (jump * Time.deltaTime);
