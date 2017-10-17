@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/Getting there.unity
+- path: Assets/_Scenes/Almost a mini game.unity
   isLoaded: 1
   isActive: 1

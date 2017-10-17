@@ -11,12 +11,14 @@ public class PlayerMovement : MonoBehaviour
     public GameObject shot;
 	public Transform GunEnd;
 	public float BulletSpeed;
+    public CharacterController Player;
 
 	// Use this for initialization
 	void Start ()
 	{
 		SetSpeed = Speed;
 		Cursor.lockState = CursorLockMode.Locked;
+        Player = GetComponent<CharacterController>();
 	}
 	// Update is called once per frame
 	void Update () 
@@ -42,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
  
         }
 
-		if (Input.GetKey (KeyCode.LeftShift)) 
+		if (Input.GetKey (KeyCode.LeftShift) && Player.isGrounded) 
 		{
 			Speed = RunSpeed;
 		} 

@@ -9,6 +9,7 @@ public class Jump : MonoBehaviour
 	public float jumpPower;
 	private Vector3 jump = Vector3.zero;
 	public float Gravity;
+    private double speed = 0;
 	// Use this for initialization
 	void Start () 
 	{
@@ -29,12 +30,16 @@ public class Jump : MonoBehaviour
 				if (Input.GetButtonDown ("Jump")) 
 				{
 					jumps--;
-					jump.y = jumpPower;
+                    speed = 0;
+                    jump.y = jumpPower;
 				}
 			}
-
-
-		jump.y -= Gravity * Time.deltaTime;
+        if (!Player.isGrounded)
+            speed -= Gravity * Time.deltaTime;
+        else 
+            speed = 0;
+        
+        jump.y = jump.y + (float)speed * Time.deltaTime;
 		Player.Move (jump * Time.deltaTime);
 	}
 }
