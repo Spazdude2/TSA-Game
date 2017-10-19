@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/Getting there.unity
+- path: Assets/_Scenes/Theme Songs.unity
   isLoaded: 1
   isActive: 1
