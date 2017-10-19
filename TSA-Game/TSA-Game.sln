@@ -1,7 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+<<<<<<< HEAD
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSA-Game", "TSA-Game.csproj", "{50C09DF4-FCBE-6066-C382-F957D5C1558C}"
+=======
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSA-Game.CSharp", "TSA-Game.CSharp.csproj", "{1DEB00C6-8EAD-7145-D667-F8242FA337D3}"
+>>>>>>> origin/master
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +14,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{50C09DF4-FCBE-6066-C382-F957D5C1558C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{50C09DF4-FCBE-6066-C382-F957D5C1558C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50C09DF4-FCBE-6066-C382-F957D5C1558C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50C09DF4-FCBE-6066-C382-F957D5C1558C}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{1DEB00C6-8EAD-7145-D667-F8242FA337D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DEB00C6-8EAD-7145-D667-F8242FA337D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DEB00C6-8EAD-7145-D667-F8242FA337D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DEB00C6-8EAD-7145-D667-F8242FA337D3}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> origin/master
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
