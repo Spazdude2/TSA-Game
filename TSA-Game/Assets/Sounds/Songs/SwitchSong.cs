@@ -22,6 +22,9 @@ public class SwitchSong : MonoBehaviour
 	[SerializeField]
 	AudioSource PKM = null;
 
+	[SerializeField]
+	AudioSource POL = null;
+
     // Use this for initialization
     void Start ()
     {
@@ -31,6 +34,7 @@ public class SwitchSong : MonoBehaviour
         Four.GetComponent<AudioSource>().enabled = false;
         PKL.GetComponent<AudioSource>().enabled = false;
 		PKM.GetComponent<AudioSource>().enabled = false;
+		POL.GetComponent<AudioSource>().enabled = false;
     }
 	
 	// Update is called once per frame
@@ -44,6 +48,7 @@ public class SwitchSong : MonoBehaviour
             Four.GetComponent<AudioSource>().enabled = false;
             PKL.GetComponent<AudioSource>().enabled = false;
 			PKM.GetComponent<AudioSource>().enabled = false;
+			POL.GetComponent<AudioSource>().enabled = false;
         }
 
         if (Input.GetKeyDown("2"))
@@ -54,6 +59,7 @@ public class SwitchSong : MonoBehaviour
             Four.GetComponent<AudioSource>().enabled = false;
             PKL.GetComponent<AudioSource>().enabled = false;
 			PKM.GetComponent<AudioSource>().enabled = false;
+			POL.GetComponent<AudioSource>().enabled = false;
         }
 
         if (Input.GetKeyDown("3"))
@@ -64,6 +70,7 @@ public class SwitchSong : MonoBehaviour
             Four.GetComponent<AudioSource>().enabled = false;
             PKL.GetComponent<AudioSource>().enabled = false;
 			PKM.GetComponent<AudioSource>().enabled = false;
+			POL.GetComponent<AudioSource>().enabled = false;
         }
 
         if (Input.GetKeyDown("4"))
@@ -74,6 +81,7 @@ public class SwitchSong : MonoBehaviour
             Four.GetComponent<AudioSource>().enabled = true;
             PKL.GetComponent<AudioSource>().enabled = false;
 			PKM.GetComponent<AudioSource>().enabled = false;
+			POL.GetComponent<AudioSource>().enabled = false;
         }
 
 		if (Input.GetKey("p") && Input.GetKey("k") && Input.GetKey("l"))
@@ -84,6 +92,7 @@ public class SwitchSong : MonoBehaviour
             Four.GetComponent<AudioSource>().enabled = false;
             PKL.GetComponent<AudioSource>().enabled = true;
 			PKM.GetComponent<AudioSource>().enabled = false;
+			POL.GetComponent<AudioSource>().enabled = false;
         }
 
 		if (Input.GetKey("p") && Input.GetKey("k") && Input.GetKey("m"))
@@ -94,6 +103,18 @@ public class SwitchSong : MonoBehaviour
 			Four.GetComponent<AudioSource>().enabled = false;
 			PKL.GetComponent<AudioSource>().enabled = false;
 			PKM.GetComponent<AudioSource>().enabled = true;
+			POL.GetComponent<AudioSource>().enabled = false;
+		}
+
+		if (Input.GetKey("m") && Input.GetKey("v") && Input.GetKey("l"))
+		{
+			One.GetComponent<AudioSource>().enabled = false;
+			Two.GetComponent<AudioSource>().enabled = false;
+			Three.GetComponent<AudioSource>().enabled = false;
+			Four.GetComponent<AudioSource>().enabled = false;
+			PKL.GetComponent<AudioSource>().enabled = false;
+			PKM.GetComponent<AudioSource>().enabled = false;
+			POL.GetComponent<AudioSource>().enabled = true;
 		}
 
         if (Input.GetKeyDown("u"))
@@ -104,6 +125,7 @@ public class SwitchSong : MonoBehaviour
             Four.GetComponent<AudioSource>().enabled = false;
             PKL.GetComponent<AudioSource>().enabled = false;
 			PKM.GetComponent<AudioSource>().enabled = false;
+			POL.GetComponent<AudioSource>().enabled = false;
         }
     }
 }
