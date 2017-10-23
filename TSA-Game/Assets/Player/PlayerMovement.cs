@@ -8,20 +8,16 @@ public class PlayerMovement : MonoBehaviour
 
 	public float Speed;
 	public float RunSpeed;
-    public GameObject shot;
-	public Transform GunEnd;
-	public float BulletSpeed;
-    public CharacterController Player;
 
 	// Use this for initialization
 	void Start ()
 	{
 		SetSpeed = Speed;
 		Cursor.lockState = CursorLockMode.Locked;
-        Player = GetComponent<CharacterController>();
+
 	}
 	// Update is called once per frame
-	void Update () 
+	void Update ()
 	{
 	    
 
@@ -36,23 +32,19 @@ public class PlayerMovement : MonoBehaviour
 		{
 			Cursor.lockState = CursorLockMode.None;
 		}
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            GameObject newShot = Instantiate(shot, GunEnd.transform.position + GunEnd.transform.forward * 0.5f, Quaternion.Euler(transform.rotation.eulerAngles));
-            newShot.GetComponent<Rigidbody>().velocity = GunEnd.transform.forward * BulletSpeed;
- 
-        }
-
-		if (Input.GetKey (KeyCode.LeftShift) && Player.isGrounded) 
+			
+	}
+	void OnCollisionEnter (Collision collision)
+	{
+		if (Input.GetKey (KeyCode.LeftShift)) 
 		{
 			Speed = RunSpeed;
 		} 
-
 		else 
 		{
 			Speed = SetSpeed;
 		}
 
 	}
+		
 }
